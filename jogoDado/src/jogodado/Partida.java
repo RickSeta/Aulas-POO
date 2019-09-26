@@ -9,8 +9,8 @@ public class Partida {
     
     public static void novoJogo(Boolean novo){
         if(novo){
-            jogo();
             numPartidas++;
+            jogo();
         }
     }
     
@@ -32,11 +32,9 @@ public class Partida {
         
         if(estado == 1){
             
-            Partida.vitorias++;
             return;
         }else if(estado == 0){
             
-            Partida.derrotas++;
             return;
         }
         do{

@@ -9,6 +9,8 @@ public class JogoDado {
     public static void main(String[] args) {
         
         Boolean continua;
+        Partida.vitorias = 0;
+        Partida.derrotas = 0;
         Partida.novoJogo(true);
         do{
 
@@ -17,7 +19,7 @@ public class JogoDado {
             System.out.println("Se quiser jogar denovo tecle sim. ");
 
             String jogar = entrada.nextLine();
-            if(!jogar.equals("Sim") || !jogar.equals("sim") || !jogar.equals("s")){
+            if(jogar.equals("sim")){
                 continua = true;
                 Partida.novoJogo(continua);
             }else{

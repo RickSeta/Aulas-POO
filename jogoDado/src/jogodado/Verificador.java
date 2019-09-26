@@ -10,9 +10,11 @@ public class Verificador {
         
         if(rolagem == 7 || rolagem == 11){
             System.out.println("\nParabens! Voce venceu de primeira!");
+            Partida.vitorias++;
             return 1;
         }else if(rolagem == 2 || rolagem == 3 || rolagem == 12){
             System.out.println("\nInfelizmente voce perdeu de primeira...");
+            Partida.derrotas++;
             return 0;
         }
         Verificador.ponto = rolagem;
@@ -23,10 +25,12 @@ public class Verificador {
         
         if (rolagem == ponto){
             fim = true;
+            Partida.vitorias++;
             System.out.println("\nParabens, voce ganhou em ");
             return 1;
         }else if(rolagem == 7){
             fim = true;
+            Partida.derrotas++;
             System.out.print("\nVoce perdeu em ");
             return 0;
         }
