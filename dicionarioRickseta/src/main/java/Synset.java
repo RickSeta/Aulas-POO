@@ -1,8 +1,10 @@
+package com.mycompany.aula0210.entidades;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public abstract class Synset {
     
-    public abstract void adicionaNovo(String tipo,String chave,Palavra palavra);
-    protected abstract Boolean checaSeTem(String chave, String nomeLista);
-    
-    
+    String significado;
+    Map<String,Palavra> Tipos = new HashMap<>();
 }
